@@ -1,0 +1,103 @@
+body {
+  font-family: "メイリオ", Meiryo, sans-serif;
+  font-size: 2em;
+  margin: 20px;
+  color: #eee;
+  background-color: #444;
+}
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #000;
+}
+span.update, span.openClose {
+  font-size: 0.7em;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #003f8e;
+  padding: 0 0.5em;
+  line-height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  overflow: hidden;
+  font-weight: normal;
+  background: linear-gradient(#d6f1fe 0%, #bcaaff 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  user-select: none;
+}
+span.update:active, span.openClose:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(#d6f1fe 0%, #bcaaff 100%);
+}
+div.card {
+  display: inline-block;
+  width: 176px;
+  height: 246px;
+  margin: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+div.card div {
+  position: absolute;
+  width: 160px;
+  height: 230px;
+  font-size: 2em;
+  text-align: center;
+  line-height: 230px;
+  color: #000;
+  background-color: #fff;
+  border: 8px solid #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+  transition: all 0.7s ease-in-out 0.2s;
+}
+div.card div span {
+  position: absolute;
+  font-size: 0.5em;
+  width: auto;
+  line-height: 1em;
+}
+div.card div span:nth-child(1) {
+  left: 0;
+  top: 0;
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+div.card div span:nth-child(2) {
+  position: relative;
+  margin: auto;
+  font-size: 0.25em;
+}
+div.card div span:nth-child(3) {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+}
+div.card div.back {
+  background:
+    linear-gradient(30deg, transparent 50%, rgba(255,255,255,.8) 75%),
+    linear-gradient(200deg, transparent 50%, rgba(255,255,255,.8) 75%),
+   #36c;
+  background-size: 20px 18px;
+}
+div.front {
+  transform: perspective(400px) rotateY(-180deg);
+}
+/* div.card:active div.back {
+  transform: perspective(400px) rotateY(180deg);
+}
+div.card:active div.front {
+  transform: perspective(400px) rotateY(0deg);
+} */
+div.card div.red {
+  color: red;
+}
